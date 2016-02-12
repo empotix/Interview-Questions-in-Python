@@ -8,11 +8,14 @@ Created on Oct 15, 2015
 #Find the integer which does not comply to that rule.
 
 def main(num):
+    
     #Take the unique elements of the list and multiply every element by 3
+    #This finds what the sum should have been
     n = lambda x: x*3
     y = map(n, set(num))
     
-    #The difference between the ideal sum and the current sum is the missing element
+    #The difference between the ideal sum and the current sum is the missing 
+    #element
     return sum(y) - sum(num)
     
 if __name__ == '__main__':
