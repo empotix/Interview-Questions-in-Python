@@ -14,15 +14,13 @@ def permutations():
 class Permutations(object):
     
     def __init__(self, s):
-        #Dont need to declare object variables outside and then initialise them here.
-        #Directly initialise them on self over here
         self.s = [ch for ch in s]
         self.used = [0 for _ in xrange(0,len(s))]
         self.out = []
         
     def permute(self):
         if len(self.out) == len(self.s):
-            print(self.out)
+            print(''.join(self.out))
             return
             
         for i in range(len(self.s)):
@@ -38,5 +36,5 @@ class Permutations(object):
                 self.used[i] = 0
                 self.out = self.out[:-1]
                 
-ob = Permutations("abcd")
+ob = Permutations("abc")
 ob.permute()
