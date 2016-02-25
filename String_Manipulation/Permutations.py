@@ -9,7 +9,10 @@ def permutations():
     num = 'abcd'
     for x in num:
         results = [r[:i] + [x] + r[i:] for r in results for i in range(len(r)+1)]
+
     print(results)
+
+permutations()
 
 class Permutations(object):
     
@@ -37,4 +40,4 @@ class Permutations(object):
                 self.out = self.out[:-1]
                 
 ob = Permutations("abc")
-ob.permute()
+#ob.permute()
